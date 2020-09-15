@@ -1,0 +1,9 @@
+main: xyz.andreiwasfound.moongravity.Main
+name: MoonGravity
+author: AndreiWasFound
+version: 1.0
+
+commands:
+  moongravity:
+    permission: moongravity.use
+    description: Set's every player in the server moon gravity
