@@ -19,6 +19,7 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         printToConsole("Events are trying to register");
         getServer().getPluginManager().registerEvents(new Events(this), this);
+        getServer().getPluginManager().registerEvents(new UpdateChecker(this, 83895), this);
         printToConsole("Events have been registered successfully");
         printToConsole("Commands are trying to register");
         getCommand("moongravity").setExecutor(new Commands(this));
@@ -29,7 +30,7 @@ public class Main extends JavaPlugin {
         MetricsLite metrics = new MetricsLite(this, pluginId);
         printToConsole("bStats has been registered successfully");
         printToConsole("UpdateChecker is trying to register");
-        UpdateChecker updateChecker = new UpdateChecker(this, 80958);
+        UpdateChecker updateChecker = new UpdateChecker(this, 83895);
         updateChecker.registerUpdateChecker(updateChecker);
         printToConsole("UpdateChecker has been registered successfully");
     }
